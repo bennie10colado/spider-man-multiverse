@@ -2,12 +2,18 @@
 @import url(global.css);
 @import url(components/_navigator.css);
 @import url(components/_pills.css);
+@import url(components/_link-button.css);
+@import url(components/_gallery.css);
 
 .s-wrapper {
   display: flex;
   height: 100vh;
   flex-flow: row nowrap;
-  background-color: aqua;
+}
+
+.s-wrapper video {
+  position: fixed;
+  width: 100%;
 }
 
 .s-wrapper .s-left-column {
@@ -27,8 +33,11 @@
   height: 100%;
   width: 100%;
   display: flex;
-  background-color: gray;
   padding-left: 130px;
+  /*padding-bottom: 100px;
+  background-image: url("../images/spiderman-tobey/movie-01/background.png");
+  background-size: cover;*/ /*ASSIM EH POSSÍVEL APARECER A CENA DO VIDEO NO FUNDO, AO ATIVAR O BACKGROUND RETORNA A FOTO*/
+  position: relative;
 }
 
 .s-wrapper .s-main-content__top {
@@ -38,31 +47,58 @@
   justify-content: flex-start;
 }
 
-.s-wrapper .s-main-content__bottom {
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 .s-wrapper .s-main-content .s-logo img {
   margin-top: 50px;
   margin-left: 0;
   margin-bottom: 30px;
 }
 
-.s-wrapper .s-main-content__top .s-description{
-  background-color: rgba(0,0,0,.7);
-  max-width: 50%;
+.s-wrapper .s-main-content__top .s-description {
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 60%;
+  max-height: 70%;
   padding: 20px;
   border-radius: 10px;
 }
 
-.s-wrapper .s-main-content__top .s-description .s-description__text p{
+.s-wrapper .s-main-content__top .s-description .s-description__text p {
   color: white;
   line-height: 170%;
 }
 
-.s-wrapper .s-main-content__top .s-description .pills{
+.s-wrapper .s-main-content__top .s-description .pills {
   margin-bottom: 20px;
+}
+
+.s-wrapper .s-main-content__bottom {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 90px;
+}
+
+.s-wrapper .s-main-content .s-links {
+  padding: 20px;
+  padding-left: 0;
+}
+
+.s-wrapper .s-main-content .s-links ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.s-spiderman-01-01 {
+  background-image: url("../images/spiderman-tobey/movie-01/background.png");
+  background-size: cover;
+}
+
+.s-spiderman-01-02 {
+  background-image: url("../images/spiderman-tobey/movie-02/background.png");
+  background-size: cover;
+}
+
+.s-spiderman-01-03 {
+  background-image: url("../images/spiderman-tobey/movie-03/background.png");
+  background-size: cover;
 }
